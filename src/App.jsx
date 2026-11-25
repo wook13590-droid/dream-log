@@ -13,7 +13,7 @@ import MyRecords from './pages/MyRecords'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dream-log">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
