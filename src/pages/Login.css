@@ -1,0 +1,107 @@
+/* 로그인 페이지 */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 20px;
+  background: #FFFFFF;
+}
+
+/* 로고 */
+.auth-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* 로그인 영역 */
+.auth-container {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.auth-subtitle {
+  margin-bottom: 14px;
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.auth-container h1 {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.auth-description {
+  margin-top: 12px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 입력 폼 */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 38px;
+}
+
+.auth-form label {
+  margin: 18px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  height: 50px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-size: 14px;
+}
+
+.auth-form input:focus {
+  border-color: var(--color-primary);
+}
+
+.auth-form input::placeholder {
+  color: #BBBBBB;
+}
+
+/* 로그인 버튼 */
+.auth-submit {
+  height: 52px;
+  margin-top: 32px;
+  border-radius: var(--radius-sm);
+  background: #292929;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.auth-submit:hover {
+  background: var(--color-primary);
+}
+
+/* 회원가입 안내 */
+.auth-bottom {
+  margin-top: 28px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.auth-bottom a {
+  color: var(--color-primary);
+  font-weight: 600;
+}

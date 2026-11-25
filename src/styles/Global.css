@@ -1,0 +1,141 @@
+
+@import url('https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css');
+
+/* 전체 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-width: 320px;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* 입력 요소 */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea {
+  font-size: 16px;
+}
+
+/* 링크 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 목록 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 이미지 */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 공통 제목 */
+h1 {
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* 전체 화면 레이아웃 초기화 */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: block;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: none;
+  padding: 0;
+  text-align: left;
+}
+/* DREAM LOG 전체 기본 글씨체 */
+html,
+body,
+#root {
+  font-family: 'SUIT', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+/* DREAM LOG 전체 기본 글씨체 통일 */
+html,
+body,
+#root {
+  font-family: var(--font-main);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}

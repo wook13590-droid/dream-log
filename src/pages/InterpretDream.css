@@ -1,0 +1,539 @@
+
+.interpret-page {
+  min-height: 100vh;
+  padding-bottom: 40px;
+  color: #655B5B;
+  background:
+    radial-gradient(ellipse at 15% 20%, #FFFDF9, transparent 40%),
+    radial-gradient(ellipse at 85% 80%, #E9DDED, transparent 40%),
+    #F3EAE3;
+}
+
+/* 상단 메뉴 */
+.interpret-header {
+  min-height: 78px;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: rgba(255, 250, 246, .92);
+  border-bottom: 1px solid #E9DCD2;
+}
+
+.interpret-logo {
+  color: #9380A5;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.interpret-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.interpret-nav a {
+  color: #827777;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.interpret-nav a:hover,
+.interpret-nav a.interpret-nav-active {
+  color: #9276A8;
+}
+
+.interpret-nav-active {
+  font-weight: 700;
+}
+
+/* 일기장 */
+.interpret-scene {
+  width: min(1050px, 94%);
+  margin: 55px auto;
+}
+
+.interpret-paper {
+  position: relative;
+  padding: 65px 75px 45px;
+  overflow: hidden;
+  border: 8px solid #D8C3B3;
+  border-radius: 22px;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(190, 164, 146, .12) 40px
+    ),
+    #FFF9F0;
+  box-shadow:
+    0 20px 45px rgba(91, 66, 55, .15),
+    inset 0 0 25px rgba(150, 115, 90, .06);
+}
+
+.interpret-decoration {
+  position: absolute;
+  font-size: 65px;
+  pointer-events: none;
+}
+
+.interpret-decoration-top {
+  top: 15px;
+  right: 30px;
+}
+
+.interpret-decoration-bottom {
+  bottom: 10px;
+  left: 20px;
+}
+
+/* 제목 */
+.interpret-heading {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.interpret-heading > span {
+  color: #A18BAA;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.interpret-heading h1 {
+  margin-top: 15px;
+  color: #65566B;
+  font-size: 34px;
+}
+
+.interpret-heading p {
+  margin-top: 12px;
+  color: #9C8882;
+  font-size: 16px;
+}
+
+/* 입력 */
+.interpret-input-area {
+  position: relative;
+  z-index: 1;
+}
+
+.interpret-input-area label {
+  display: block;
+  margin-bottom: 15px;
+  color: #806D81;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.interpret-input-area textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 22px;
+  border: 1px solid #E9DCD2;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 38px,
+      rgba(190, 164, 146, .18) 39px
+    ),
+    rgba(255, 255, 255, .75);
+  color: #655B5B;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 2;
+  transition: .2s ease;
+}
+
+.interpret-input-area textarea:focus {
+  border-color: #BBA5C9;
+  box-shadow: 0 0 0 3px rgba(187, 165, 201, .12);
+}
+
+.interpret-input-area textarea::placeholder {
+  color: #B4A5A0;
+}
+
+.interpret-input-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.interpret-input-footer > span {
+  color: #A18B91;
+  font-size: 14px;
+}
+
+.interpret-button {
+  padding: 15px 30px;
+  border: 1px solid #CBB5D1;
+  border-radius: 30px;
+  background: #DCCAE5;
+  color: #65566B;
+  font-size: 16px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.interpret-button:hover {
+  background: #CFB9DA;
+  transform: translateY(-2px);
+}
+
+.interpret-button:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
+.interpret-paper-note {
+  margin-top: 40px;
+  color: #A18B91;
+  font-size: 14px;
+  text-align: center;
+}
+
+.interpret-footer {
+  margin-top: 35px;
+  color: #AA9690;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* 로딩 팝업 */
+.interpret-loading-overlay,
+.interpret-modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(48, 37, 48, .48);
+  backdrop-filter: blur(5px);
+}
+
+.interpret-loading-card {
+  width: min(430px, 100%);
+  padding: 55px 30px;
+  border: 2px solid #E6D6E9;
+  border-radius: 25px;
+  background: #FFF9F4;
+  box-shadow: 0 20px 60px rgba(40, 30, 45, .2);
+  text-align: center;
+  animation: loadingAppear .4s ease;
+}
+
+.loading-moon {
+  color: #B69ACB;
+  font-size: 65px;
+  animation: moonFloat 2s ease-in-out infinite;
+}
+
+.loading-stars {
+  margin-top: 8px;
+  color: #D4B57D;
+  font-size: 25px;
+  animation: starTwinkle 1.2s ease-in-out infinite;
+}
+
+.interpret-loading-card h2 {
+  margin-top: 20px;
+  color: #65566B;
+  font-size: 23px;
+}
+
+.interpret-loading-card p {
+  margin-top: 10px;
+  color: #96858B;
+  font-size: 15px;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B99DC7;
+  animation: dotBounce .8s ease-in-out infinite alternate;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: .4s;
+}
+
+/* 큰 해몽 모달 */
+.interpret-modal-overlay {
+  z-index: 1100;
+  animation: overlayAppear .3s ease;
+}
+
+.interpret-modal {
+  position: relative;
+  width: min(850px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 12px;
+  border: 2px solid #D9C4E2;
+  border-radius: 28px;
+  background: #F0E4F3;
+  box-shadow: 0 25px 80px rgba(35, 25, 40, .3);
+  animation: modalAppear .45s ease;
+}
+
+.interpret-modal::before {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(185, 157, 199, .45);
+  border-radius: 20px;
+  content: '';
+  pointer-events: none;
+}
+
+.interpret-modal-close {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #8B7889;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.interpret-modal-close:hover {
+  background: #F2E8F3;
+}
+
+.modal-decoration {
+  position: absolute;
+  font-size: 60px;
+  pointer-events: none;
+}
+
+.modal-decoration-left {
+  top: 100px;
+  left: 25px;
+  opacity: .7;
+}
+
+.modal-decoration-right {
+  right: 30px;
+  bottom: 65px;
+  color: #D9B86F;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1;
+  min-height: 570px;
+  padding: 55px 70px 45px;
+  border-radius: 19px;
+  background:
+    radial-gradient(ellipse at 0% 100%, #F1E4F6, transparent 30%),
+    radial-gradient(ellipse at 100% 0%, #F7EAF0, transparent 30%),
+    #FFFCF8;
+  text-align: center;
+}
+
+.modal-label {
+  color: #A18BAA;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.modal-moon {
+  margin-top: 15px;
+  color: #C2A5D2;
+  font-size: 48px;
+}
+
+.modal-content h2 {
+  margin-top: 12px;
+  color: #65566B;
+  font-size: 32px;
+}
+
+.modal-divider {
+  margin: 20px 0 30px;
+  color: #B99DC7;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.modal-dream {
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: #F8F2F0;
+  text-align: left;
+}
+
+.modal-dream span,
+.modal-interpretation span {
+  color: #9D83AA;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal-dream p {
+  margin-top: 10px;
+  color: #786C6C;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.modal-interpretation {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.modal-interpretation p {
+  margin-top: 12px;
+  color: #655B5B;
+  font-size: 17px;
+  line-height: 2;
+  white-space: pre-wrap;
+}
+
+.modal-note {
+  margin-top: 25px;
+  color: #A99A9A;
+  font-size: 12px;
+}
+
+.modal-save-button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 16px 35px;
+  border: 1px solid #CBB5D1;
+  border-radius: 35px;
+  background: #DCCAE5;
+  color: #65566B;
+  font-size: 16px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.modal-save-button:hover {
+  background: #CFB9DA;
+  transform: translateY(-2px);
+}
+
+.modal-close-text {
+  margin-top: 18px;
+  color: #9A8C91;
+  font-size: 14px;
+}
+
+/* 애니메이션 */
+@keyframes moonFloat {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: .45; transform: scale(.9); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes dotBounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+@keyframes loadingAppear {
+  from { opacity: 0; transform: scale(.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes overlayAppear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalAppear {
+  from { opacity: 0; transform: translateY(20px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* 모바일 */
+@media (max-width: 700px) {
+  .interpret-header {
+    flex-wrap: wrap;
+  }
+
+  .interpret-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .interpret-nav a {
+    font-size: 13px;
+  }
+
+  .interpret-scene {
+    margin: 25px auto;
+  }
+
+  .interpret-paper {
+    padding: 45px 22px 30px;
+  }
+
+  .interpret-heading h1 {
+    font-size: 27px;
+  }
+
+  .interpret-input-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .interpret-button {
+    width: 100%;
+  }
+
+  .modal-content {
+    min-height: auto;
+    padding: 55px 22px 35px;
+  }
+
+  .modal-content h2 {
+    font-size: 25px;
+  }
+
+  .modal-interpretation p {
+    font-size: 15px;
+  }
+
+  .modal-decoration {
+    font-size: 35px;
+  }
+}

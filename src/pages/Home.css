@@ -1,0 +1,149 @@
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  color: #292929;
+}
+
+/* 상단 헤더 */
+.home-header {
+  width: 100%;
+  height: 84px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.home-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.home-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 14px;
+}
+
+.home-nav a {
+  transition: var(--transition);
+}
+
+.home-nav a:hover {
+  color: var(--color-primary);
+}
+
+.signup-button {
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+/* 중앙 콘텐츠 */
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home-subtitle {
+  margin-bottom: 24px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.home-content h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -2px;
+}
+
+.home-description {
+  margin-top: 24px;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+}
+
+/* 버튼 */
+.home-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.home-primary-button,
+.home-secondary-button {
+  padding: 15px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.home-primary-button {
+  background: #292929;
+  color: #FFFFFF;
+}
+
+.home-primary-button:hover {
+  background: var(--color-primary);
+}
+
+.home-secondary-button {
+  border: 1px solid var(--color-border);
+}
+
+.home-secondary-button:hover {
+  background: var(--color-bg-soft);
+}
+
+/* 하단 */
+.home-footer {
+  padding: 28px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-text-light);
+  border-top: 1px solid #F2F2F2;
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .home-header {
+    padding: 0 5%;
+  }
+
+  .home-logo {
+    font-size: 18px;
+  }
+
+  .home-nav {
+    gap: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-description {
+    font-size: 14px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+}
